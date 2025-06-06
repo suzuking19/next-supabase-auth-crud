@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js + Supabase 認証・CRUD アプリ
 
-## Getting Started
+Next.js 15 と Supabase を使用した認証機能（Auth）と CRUD 操作を実装した Web アプリケーションです。
 
-First, run the development server:
+## 技術スタック
+
+- **フロントエンド**: Next.js 15 (App Router)
+- **バックエンド**: Supabase
+- **スタイリング**: Tailwind CSS 4
+- **言語**: TypeScript
+- **デプロイ**: Vercel
+
+## 機能
+
+- ユーザー認証（サインアップ・ログイン・ログアウト）
+- 認証認可機能
+- CRUD 操作
+- レスポンシブデザイン
+
+## 開発環境
+
+### 必要なもの
+
+- Node.js 18.17 以上
+- npm
+- Supabase アカウント
+- Vercel アカウント（デプロイする場合）
+
+### セットアップ
+
+1. リポジトリをクローン
+
+```bash
+git clone <repository-url>
+cd next-supabase-auth-crud
+```
+
+2. 依存関係をインストール
+
+```bash
+npm install
+```
+
+3. 環境変数を設定
+
+env.txt の内容を.env.local に記述
+
+4. 開発サーバーを起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## プロジェクト構造
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+あとでここにプロジェクト構造を記述
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## デプロイ
 
-## Learn More
+Vercel にデプロイ済み:  
+[デプロイ URL（準備中）]
 
-To learn more about Next.js, take a look at the following resources:
+## 🔧 開発メモ
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Supabase MCP Server を試験的に使用中
