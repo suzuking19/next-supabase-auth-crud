@@ -4,11 +4,7 @@ import { createClient } from "@/utils/supabase/server";
 
 export default async function Home() {
   const supabase = await createClient();
-
-  const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {
-    redirect("/login");
-  }
+  const { data } = await supabase.auth.getUser();
 
   const signOut = async () => {
     "use server";
@@ -29,7 +25,7 @@ export default async function Home() {
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
               それではsupabaseで認証機能とCRUD(TODOアプリ)を実装していきましょう
             </h1>
-            <p className="text-gray-600 mb-6">Hello {data.user.email}</p>
+            <p className="text-gray-600 mb-6">Hello {data?.user?.email}</p>
 
             <form>
               <button
